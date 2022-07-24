@@ -23,9 +23,14 @@ const initState:any = [
 
 function App() {
 
-  const [col] = React.useState(initState)
+  const [column, setColumn] = React.useState(initState)
   //TODO:
   //Method for handling input changes on add-card
+  const handleInputChange = (value:any, columnIndex: any) => {
+    const nextColumn = [...column];
+    nextColumn[columnIndex].input = value;
+    setColumn(nextColumn)
+  }
 
   //Method for handling the addition of an add card
 
@@ -35,10 +40,13 @@ function App() {
       <div className="mckello">
         <h1>McKello</h1>
         <div className="columnContainer">
-          {col.map(() => (
+          {column.map((value:any, index:any) => (
             <Column 
-              label={"todo"}
-              btnLabel="Move to 'In Progress'"
+              index={index}
+              handleInputChange={handleInputChange}
+              data={value}
+              key={index}
+              btnLabel="todo"
             />
           ))}
 
