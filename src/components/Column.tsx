@@ -10,7 +10,7 @@ const Column = ({btnLabel, data, handleInputChange, index, handleAddCard}:any) =
                     key={index}
                     cardTitle={value}
                 />
-            ))};
+            ))}
             <input 
                 onChange={(e:any) => handleInputChange(e.target.value, index)}
                 value={data.input}

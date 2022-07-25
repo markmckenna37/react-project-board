@@ -42,6 +42,8 @@ function App() {
   }
 
   //method for handling the card shifts between columns
+
+
   return (
     <div className="wrapper">
       <div className="mckello">
