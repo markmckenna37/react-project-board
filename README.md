@@ -15,15 +15,18 @@
 <br>
 Start by simply typing a task in the text-field at the bottom of the column. Once the task is labeled as you like, click "Add a task".
 ![1](https://user-images.githubusercontent.com/64279581/180837884-eaaea185-b89d-43b9-9a07-c7c4c0d3f31e.png)
+
 ![2](https://user-images.githubusercontent.com/64279581/180837924-58c5e00a-df7a-4b5f-aaad-2d9de1ebd87b.png)
 
 <br>
 
 Use the "Next" and "Previous" buttons to toggle the task between columns.
+
 ![3](https://user-images.githubusercontent.com/64279581/180837945-1dc73c26-2727-4374-8b3c-59337b57a621.png)
 
 <br>
 To delete an item, simply click the red 'X' icon in the corner of the card.
+
 ![4](https://user-images.githubusercontent.com/64279581/180837957-27e38458-19e1-4a04-965d-2d01a4faff79.png)
 
 
