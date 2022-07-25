@@ -13,13 +13,13 @@
 
 .column {
   width: 20rem;
-  background: lightblue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 2rem 2rem 0 0;
   padding: 0 1rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .column:last-of-type{
   margin-right: 0;
@@ -61,8 +61,8 @@
   justify-content: space-around;
 }
 
-.cardBtnContainer button, .columnInputContainer button {
-  background-color: #1568c7;
+.moveBtn, .completeBtn, .columnInputContainer button {
+  background-color: #1586c7;
   color: #fff;
   border: none;
   padding: .5rem 1rem;
@@ -74,4 +74,15 @@
     width: 6rem;
     margin: 1rem 0 1rem .5rem;
     background-color: #4ed12e;
+}
+
+.completeBtn {
+  width: 9rem;
+  background-color: #4ed12e;
+}
+
+input {
+  border: none;
+  padding: .5rem;
+  border-radius: 1rem;
 }

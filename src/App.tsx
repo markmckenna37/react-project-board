@@ -6,17 +6,20 @@ const initState:any = [
   {
     title: "TODO",
     items: [],
-    input: ""
+    input: "",
+    backgroundColor: "#e077d270"
   },
   {
     title: "IN PROGRESS",
     items: [],
-    input: ""
+    input: "",
+    backgroundColor: "#31aaf0a8"
   },
   {
     title: "COMPLETE",
     items: [],
-    input: ""
+    input: "",
+    backgroundColor: "#28fa6e70"
   }
 ]
 
@@ -49,8 +52,10 @@ function App() {
     nextColumn[fromColumn].items.splice(cardIndex, 1)
     nextColumn[toColumn].items.push(shiftingCard);
     setColumn(nextColumn)
-    console.log(cardIndex)
   }
+
+  //todo: handle delete item
+
 
 
   return (
@@ -60,15 +65,15 @@ function App() {
         <div className="columnContainer">
           {column.map((value:any, index:any) => (
             <Column 
-              index={index}
+              columnIndex={index}
               handleInputChange={handleInputChange}
               data={value}
               key={index}
               handleAddCard={handleAddCard}
               handleMove={handleMove}
               firstColumn={index === 0}
-              lastColumn={column.length -1}
-              btnLabel="todo"
+              lastColumn={index === column.length -1}
+              btnLabel={value.title}
             />
           ))}
 
