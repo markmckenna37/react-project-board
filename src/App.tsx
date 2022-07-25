@@ -29,7 +29,7 @@ function App() {
   const [column, setColumn] = React.useState(initState)
 
   //Method for handling input changes on add-card
-  const handleInputChange = (value:any, columnIndex: any) => {
+  const handleInputChange = (value:string, columnIndex: number) => {
     const columns = [...column];
     columns[columnIndex].input = value;
     setColumn(columns)
@@ -46,7 +46,7 @@ function App() {
 
   //method for handling the card shifts between columns
 
-  const handleMove = (cardIndex:any, fromColumn:any, toColumn:any) => {
+  const handleMove = (cardIndex:number, fromColumn:number, toColumn:number) => {
     const nextColumn = [...column];
     const shiftingCard = nextColumn[fromColumn].items[cardIndex];
     nextColumn[fromColumn].items.splice(cardIndex, 1)
@@ -54,7 +54,7 @@ function App() {
     setColumn(nextColumn)
   }
 
-  const handleDeleteCard = (cardIndex:any, columnIndex:any) => {
+  const handleDeleteCard = (cardIndex:number, columnIndex:number) => {
     const columns = [...column];
     columns[columnIndex].items.splice(cardIndex, 1)
     setColumn(columns)
@@ -67,7 +67,7 @@ function App() {
       <div className="mckello">
         <h1>McKello</h1>
         <div className="columnContainer">
-          {column.map((value:any, index:any) => (
+          {column.map((value:any, index:number) => (
             <Column 
               columnIndex={index}
               handleInputChange={handleInputChange}

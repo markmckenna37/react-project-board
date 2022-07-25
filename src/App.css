@@ -7,8 +7,9 @@
 .mckello {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
 }
 
 .column {
@@ -83,11 +84,19 @@
   border-radius: 1rem;
   cursor: pointer;
 }
-
+.columnInputContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0 1rem .5rem;
+}
 .columnInputContainer button {
     width: 6rem;
-    margin: 1rem 0 1rem .5rem;
     background-color: #4ed12e;
+    margin-left: .5rem;
+}
+.placeholderDiv {
+  width: 6rem;
+  margin-left: .5rem;
 }
 
 .completeBtn {
