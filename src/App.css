@@ -16,7 +16,7 @@
   background: lightblue;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 2rem 2rem 0 0;
   padding: 0 1rem;
@@ -61,11 +61,17 @@
   justify-content: space-around;
 }
 
-.cardBtnContainer button {
+.cardBtnContainer button, .columnInputContainer button {
   background-color: #1568c7;
   color: #fff;
   border: none;
   padding: .5rem 1rem;
   width: 5rem;
   border-radius: 1rem;
+}
+
+.columnInputContainer button {
+    width: 6rem;
+    margin: 1rem 0 1rem .5rem;
+    background-color: #4ed12e;
 }
