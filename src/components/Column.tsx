@@ -1,7 +1,7 @@
 import React from "react"
 import Card from "./Card"
 
-const Column = ({btnLabel, data, handleInputChange, columnIndex, handleAddCard, handleMove, firstColumn, lastColumn}:any) => {
+const Column = ({btnLabel, data, handleInputChange, columnIndex, handleAddCard, handleMove, firstColumn, lastColumn, handleDeleteCard}:any) => {
     return (
         <div className="column" style={{backgroundColor: data.backgroundColor}}>
             <h2 className="columnTitle">{btnLabel}</h2>
@@ -14,6 +14,7 @@ const Column = ({btnLabel, data, handleInputChange, columnIndex, handleAddCard, 
                     columnIndex={columnIndex}
                     firstColumn={firstColumn}
                     lastColumn={lastColumn}
+                    handleDeleteCard={handleDeleteCard}
                 />
             ))}
             <div className="columnInputContainer">

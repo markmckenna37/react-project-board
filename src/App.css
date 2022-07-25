@@ -40,6 +40,7 @@
 
 .card {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -50,6 +51,18 @@
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+
+.exitBtn {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  border: none;
+  background: rgb(255, 120, 120);
+  border-radius: 1rem;
+  padding: .3rem .5rem;
+  cursor: pointer;
+}
+
 .card:last-of-type {
   margin-bottom: 3rem;
 }
@@ -68,6 +81,7 @@
   padding: .5rem 1rem;
   width: 5rem;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .columnInputContainer button {
@@ -79,6 +93,7 @@
 .completeBtn {
   width: 9rem;
   background-color: #4ed12e;
+  cursor: pointer;
 }
 
 input {

@@ -30,18 +30,18 @@ function App() {
 
   //Method for handling input changes on add-card
   const handleInputChange = (value:any, columnIndex: any) => {
-    const nextColumn = [...column];
-    nextColumn[columnIndex].input = value;
-    setColumn(nextColumn)
+    const columns = [...column];
+    columns[columnIndex].input = value;
+    setColumn(columns)
   }
 
   //Method for handling the addition of an add card
 
   const handleAddCard = (columnIndex:any) => {
-    const nextColumn = [...column];
-    nextColumn[columnIndex].items.push(nextColumn[columnIndex].input);
-    nextColumn[columnIndex].input = ""
-    setColumn(nextColumn)
+    const columns = [...column];
+    columns[columnIndex].items.push(columns[columnIndex].input);
+    columns[columnIndex].input = ""
+    setColumn(columns)
   }
 
   //method for handling the card shifts between columns
@@ -54,7 +54,11 @@ function App() {
     setColumn(nextColumn)
   }
 
-  //todo: handle delete item
+  const handleDeleteCard = (cardIndex:any, columnIndex:any) => {
+    const columns = [...column];
+    columns[columnIndex].items.splice(cardIndex, 1)
+    setColumn(columns)
+  }
 
 
 
@@ -74,6 +78,7 @@ function App() {
               firstColumn={index === 0}
               lastColumn={index === column.length -1}
               btnLabel={value.title}
+              handleDeleteCard={handleDeleteCard}
             />
           ))}
 
