@@ -5,17 +5,17 @@ import './App.css';
 const initState:any = [
   {
     title: "TODO",
-    todos: [],
+    items: ["testing", "testing"],
     input: ""
   },
   {
     title: "IN PROGRESS",
-    todos: [],
+    items: ["testing", "testing"],
     input: ""
   },
   {
     title: "COMPLETE",
-    todos: [],
+    items: ["testing", "testing"],
     input: ""
   }
 ]
@@ -34,6 +34,13 @@ function App() {
 
   //Method for handling the addition of an add card
 
+  const handleAddCard = (columnIndex:any) => {
+    const nextColumn = [...column];
+    nextColumn[columnIndex].items.push(nextColumn[columnIndex].input);
+    nextColumn[columnIndex].input = ""
+    setColumn(nextColumn)
+  }
+
   //method for handling the card shifts between columns
   return (
     <div className="wrapper">
@@ -46,6 +53,7 @@ function App() {
               handleInputChange={handleInputChange}
               data={value}
               key={index}
+              handleAddCard={handleAddCard}
               btnLabel="todo"
             />
           ))}
