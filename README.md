@@ -14,6 +14,7 @@
 ## There are two columns that you can use to get started: 'TODO' or 'IN PROGRESS'. 
 <br>
 Start by simply typing a task in the text-field at the bottom of the column. Once the task is labeled as you like, click "Add a task".
+
 ![1](https://user-images.githubusercontent.com/64279581/180837884-eaaea185-b89d-43b9-9a07-c7c4c0d3f31e.png)
 
 ![2](https://user-images.githubusercontent.com/64279581/180837924-58c5e00a-df7a-4b5f-aaad-2d9de1ebd87b.png)
